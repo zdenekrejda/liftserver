@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3279f9a2-85e2-4899-aa59-20d50ddef483}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>{00000000-0000-0000-0000-000000000000}</InterpreterId>
+    <InterpreterVersion>0.0</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="blog\admin.py" />
+    <Compile Include="blog\migrations\0001_initial.py" />
+    <Compile Include="blog\migrations\__init__.py" />
+    <Compile Include="blog\models.py" />
+    <Compile Include="blog\tests.py" />
+    <Compile Include="blog\views.py" />
+    <Compile Include="blog\__init__.py" />
+    <Compile Include="liftserver\admin.py" />
+    <Compile Include="liftserver\migrations\__init__.py" />
+    <Compile Include="liftserver\models.py" />
+    <Compile Include="liftserver\tests.py" />
+    <Compile Include="liftserver\views.py" />
+    <Compile Include="liftserver\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="mysite\settings.py" />
+    <Compile Include="mysite\urls.py" />
+    <Compile Include="mysite\wsgi.py" />
+    <Compile Include="mysite\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="blog" />
+    <Folder Include="blog\migrations" />
+    <Folder Include="liftserver" />
+    <Folder Include="liftserver\migrations" />
+    <Folder Include="mysite" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="myvenv\">
+      <Id>{20776280-349d-48af-b7db-4fe912cee105}</Id>
+      <Description>myvenv</Description>
+      <BaseInterpreter>{00000000-0000-0000-0000-000000000000}</BaseInterpreter>
+      <InterpreterPath>
+      </InterpreterPath>
+      <WindowsInterpreterPath>
+      </WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <Version>0.0</Version>
+      <Architecture>
+      </Architecture>
+      <PathEnvironmentVariable>
+      </PathEnvironmentVariable>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
